@@ -76,17 +76,32 @@
 
 
 
-let producto = { id: 1, nombre: "Arroz", precio: 125 };
-let producto2 = { id: 2, nombre: "Flan", precio: 150 };
+// let producto = { id: 1, nombre: "Arroz", precio: 125 };
+// let producto2 = { id: 2, nombre: "Flan", precio: 150 };
 
 
-//                                  jQuery Append()
-$("#app").append(`<div><h3> ID: ${producto.id}</h3>
-                <p> Producto: ${producto.nombre}</p>
-                <b> $ ${producto.precio}</b></div>`);
+// //                                  jQuery Append()
+// $("#app").append(`<div><h3> ID: ${producto.id}</h3>
+//                 <p> Producto: ${producto.nombre}</p>
+//                 <b> $ ${producto.precio}</b></div>`);
 
 
- //              jQuery Prepend() Como lo declara la palabra "Prep" lo coloca antes, como primer hijo del elemento capturado
-$("#app").prepend(`<div><h3> ID: ${producto2.id}</h3>
-                    <p> Producto: ${producto2.nombre}</p>
-                    <b> $ ${producto2.precio}</b></div>`);
+//  //              jQuery Prepend() Como lo declara la palabra "Prep" lo coloca antes, como primer hijo del elemento capturado
+// $("#app").prepend(`<div><h3> ID: ${producto2.id}</h3>
+//                     <p> Producto: ${producto2.nombre}</p>
+//                     <b> $ ${producto2.precio}</b></div>`);
+
+const productos = [
+                   { id: 1, nombre: "Arroz", precio: 125 },
+                   { id: 2, nombre: "Fideo", precio: 70 },
+                   { id: 3, nombre: "Pan" , precio: 50},
+                   { id: 4, nombre: "Flan" , precio: 100}
+                ];
+
+for (const producto of productos) {
+    $("#app").append(`<div>
+                    <h3> ID: ${producto.id}</h3>
+                    <p> Producto: ${producto.nombre}</p>
+                    <b> $ ${producto.precio}</b>
+                    </div><br>`);
+    }
