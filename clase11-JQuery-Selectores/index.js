@@ -91,6 +91,9 @@
 //                     <p> Producto: ${producto2.nombre}</p>
 //                     <b> $ ${producto2.precio}</b></div>`);
 
+
+
+//                  EJEMPLO APLICADO: AGREGANDO AL DOM DATOS DEL ARRAY CON jQUERY
 const productos = [
                    { id: 1, nombre: "Arroz", precio: 125 },
                    { id: 2, nombre: "Fideo", precio: 70 },
