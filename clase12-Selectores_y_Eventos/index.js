@@ -17,3 +17,11 @@ $(() => {
     });
 
 
+//                  READY VS. LOAD
+$( document ).ready(function() {
+    console.log('El DOM esta listo ');
+    });
+
+ window.addEventListener ('load', function() {
+    console.log( 'Todos los elementos de la ventana están cargados ' );
+    });
