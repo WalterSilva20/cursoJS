@@ -79,14 +79,30 @@
 // }
 
 
-//                              Agregamos dos botones con jQuery
-$("body").prepend('<button id="btn1">BUTTON</button>');
-$("body").prepend('<button id="btn2">BUTTON</button>');
-//                              Asociamos el evento click para btn1
-$("#btn1").click(function () {
-console.log(this);
-});
-//                              Evento click para btn2 con Arrow function y parámetro e
-$("#btn2").click((e) => {
-console.log(e.target);
-});
+// //                              Agregamos dos botones con jQuery
+// $("body").prepend('<button id="btn1">BUTTON</button>');
+// $("body").prepend('<button id="btn2">BUTTON</button>');
+// //                              Asociamos el evento click para btn1
+// $("#btn1").click(function () {
+// console.log(this);
+// });
+// //                              Evento click para btn2 con Arrow function y parámetro e
+// $("#btn2").click((e) => {
+// console.log(e.target);
+// });
+
+
+//Agregamos inputs con jQuery
+$("body").prepend(`<input type="text" class="inputsClass">
+    <input type="number" class="inputsClass">
+    <select class="inputsClass">
+                        <option value="1" selected >ID 1</option>
+                        <option value="2">ID 2</option>
+                        <option value="3">ID 3</option>
+    </select>`);
+    
+    //Asociamos el evento change a todos los inputs
+    $(".inputsClass").change(function (e) {
+    console.log(e.target.value);
+    console.log(this.value);
+    });
