@@ -92,17 +92,36 @@
 // });
 
 
-//Agregamos inputs con jQuery
-$("body").prepend(`<input type="text" class="inputsClass">
-    <input type="number" class="inputsClass">
-    <select class="inputsClass">
-                        <option value="1" selected >ID 1</option>
-                        <option value="2">ID 2</option>
-                        <option value="3">ID 3</option>
-    </select>`);
-    
-    //Asociamos el evento change a todos los inputs
-    $(".inputsClass").change(function (e) {
-    console.log(e.target.value);
-    console.log(this.value);
+// //Agregamos inputs con jQuery
+// $("body").prepend(`<input type="text" class="inputsClass">
+//     <input type="number" class="inputsClass">
+//     <select class="inputsClass">
+//                         <option value="1" selected >ID 1</option>
+//                         <option value="2">ID 2</option>
+//                         <option value="3">ID 3</option>
+//     </select>`);
+
+//     //Asociamos el evento change a todos los inputs
+//     $(".inputsClass").change(function (e) {
+//     console.log(e.target.value);
+//     console.log(this.value);
+//     });
+
+
+//Agregamos un formulario con jQuery
+$("body").prepend(`<form id="myForm">
+                <input type="text" >
+                <input type="number">
+                <input type="submit">
+    </form>`);
+    //Asociamos el evento submit al formulario
+    $("#myForm").submit(function (e) {
+    //Prevenimos el comportamiento de submit
+    e.preventDefault();
+    //Obtenemos hijos del formulario
+    let hijos = $(e.target).children();
+    //Primer input type="text"
+    console.log(hijos[0].value);
+    //Primer input type="number"
+    console.log(hijos[1].value);
     });
